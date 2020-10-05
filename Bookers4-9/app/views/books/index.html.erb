@@ -1,1 +1,21 @@
-<h2>welcome to Bookers !!</h2>
+<%= render 'homes/list', book: @book, user: @user, books: @books %>
+
+<h2>Books</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Opinion</th>
+    </tr>
+  </thead>
+
+  <% @books.each do |book| %>
+  <tbody>
+    <td><%= attachment_image_tag book.user, :profile_image, :fill, 50, 50, format: 'jpeg' %></td>
+    <td><%= link_to book.title, book_path(book) %></td>
+    <td><%= book.body %></td>
+  </tbody>
+  <% end %>
+
+</table>
