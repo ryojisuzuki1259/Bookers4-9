@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'homes/top'
   get 'home/about'
 
-  resources :homes, only: [:show]
+  resources :homes, only: [:show, :create]
   #get 'users/show'
   devise_for :users, controllers: {
     sessions: 'users/sessions',

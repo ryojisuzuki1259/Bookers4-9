@@ -22,7 +22,31 @@
   box-sizing: border-box;
 }
 
+#notice{
+  color:green;
+}
+
 header{
      color:white;
      background-color:black;
+}
+
+div.field, div.action{
+  margin-bottom:10px;
+}
+
+.body{
+  margin-top:50px;
+}
+
+.col-xs-3{
+  float:left;
+}
+
+.col-xs-9{
+  float:right;
+}
+
+.col-xs-12{
+  width:100%;
 }

@@ -1,10 +1,10 @@
-<%= render 'homes/lists', book: @book, user: @user, books: @books %>
+<%= render 'homes/list', book: @new, user: @book.user %>
 
-<h2>Book detail</h2>
-
-  <table>
-    <td><%= attachment_image_tag @books.user, :profile_image, :fill, 50, 50, format: 'jpeg' %></td>
-    <td><%= @books.title %></td>
-    <td><%= @books.body %></td>
-  </table>
-
+<div class='col-xs-9'>
+  <h2>Book detail</h2>
+    <table class='table table-hover table-inverse'>
+      <td><%= attachment_image_tag @book.user, :profile_image, :fill, 50, 50, format: 'jpeg' %></td>
+      <td><%= @book.title %></td>
+      <td><%= @book.body %></td>
+    </table>
+</div>
